@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"/>
+  <title>Próximo Jogo - Fluminense</title>
+  <link rel="author" href="fabricioronchi.com">
+	<meta name="description" content="Tempo restante para o próximo jogo do Fluminense">
+  <style>
+    html {
+      box-sizing: border-box;
+    }
+    *, *:before, *:after {
+      box-sizing: inherit;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      background: #f8f8f8;
+      color: #0b0b0b;
+      font-family: 'Source Sans Pro', sans-serif;
+      font-weight: 600;
+    }
+    .main {
+      max-width: 100%;
+    }
+    .hello {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      text-align: center;
+      -webkit-transform: translate(-50%, -50%);
+         -moz-transform: translate(-50%, -50%);
+          -ms-transform: translate(-50%, -50%);
+           -o-transform: translate(-50%, -50%);
+              transform: translate(-50%, -50%);
+    }
+    p {
+      font-size: 30px;
+    }
+  </style>
+</head>
+  <body>
+    <main class="main-content">
+      <div class="hello">
+        <p id="time"></p>
+      </div>
+    </main>
+    <script src="app/lib/jquery/jquery.min.js"></script>
+		<script src="app/lib/countdown/countdown.min.js"></script>
+		<script type="text/javascript">
+  		$('#time').countdown('2015/01/15', function(event) {
+    		$(this).html(event.strftime('%w semanas, %d dias e %H:%M:%S horas'));
+  		});
+		</script>
+  </body>
+</html>
